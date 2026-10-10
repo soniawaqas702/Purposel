@@ -75,6 +75,18 @@ main>.topline{position:relative;z-index:3;flex:0 0 auto;min-height:30px;margin:5
   .story-slide .letter h2 { margin-top: 22px !important; }
 }
 
+
+/* Final mobile layout fix: no overlapping banner; tall slides begin at the top */
+main { padding-top: 8px !important; }
+.story-deck { min-height: 0; }
+.story-slide { justify-content: flex-start !important; padding: 12px 2px 18px !important; }
+.story-slide > .card, .story-slide > header.hero { flex: 0 0 auto; }
+.story-slide .card { margin-top: 0 !important; }
+@media(max-width:620px) {
+  .story-slide { padding: 12px 0 18px !important; }
+  .story-slide .card { padding: 20px 16px !important; }
+}
+
 </style></head>
 <body class="locked">
 <div id="passwordGate" role="dialog" aria-labelledby="gateTitle" aria-modal="true">
