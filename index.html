@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#190914">
+<title>To My Favourite Person — ROSE 🌹</title>
+<style>
+:root{--pink:#ff9dbf;--cream:#fff0f5}*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:var(--cream);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 15% 10%,#ff4b8240,transparent 35%),radial-gradient(ellipse at 90% 45%,#9c2c6c3b,transparent 38%),linear-gradient(145deg,#100910,#260d20 52%,#100810);min-height:100vh;overflow-x:hidden}
+#stars,.petals{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}.star{position:absolute;width:3px;height:3px;background:#fff0f6;border-radius:50%;opacity:.6;animation:twinkle 3s infinite ease-in-out}@keyframes twinkle{0%,100%{opacity:.18;transform:scale(.7)}50%{opacity:.9;transform:scale(1.4)}}
+.petal{position:absolute;top:-35px;animation:fall linear forwards;opacity:.75}@keyframes fall{to{transform:translateY(110vh) rotate(540deg);opacity:0}}
+main{position:relative;z-index:1;width:min(920px,92%);margin:auto;padding:28px 0 60px}.topline{text-align:center;letter-spacing:3px;text-transform:uppercase;font:11px Arial,sans-serif;color:#ffc0d7;margin:14px 0 26px}
+.hero{text-align:center;padding:36px 18px 44px}.eyebrow,.section-label{font:11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:#ff9fbe}.rose-icon{font-size:clamp(48px,10vw,78px);filter:drop-shadow(0 0 22px #ff4d91);animation:float 4s ease-in-out infinite;display:inline-block;margin:16px 0}@keyframes float{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
+h1{font-size:clamp(38px,8vw,76px);font-weight:normal;line-height:1.06;margin:8px 0 18px}h1 span{display:block;color:#ff9dbf;font-style:italic}.subtitle{font:15px/1.8 Arial,sans-serif;color:#e8cbd8;max-width:580px;margin:auto}.signature{font-size:18px;color:#ffbad1;margin-top:26px;font-style:italic}.scroll-note{margin-top:38px;font:11px Arial,sans-serif;letter-spacing:2px;color:#c9a6b7}
+.card{background:#ffffff16;border:1px solid #ffffff2b;border-radius:24px;padding:clamp(22px,5vw,42px);margin:20px 0;backdrop-filter:blur(12px);box-shadow:0 18px 50px #0003}h2{font-size:clamp(27px,5vw,40px);font-weight:normal;line-height:1.2;margin:14px 0 20px}p{font-size:17px;line-height:1.9;color:#f5dce7}.letter p{margin:0 0 15px}.letter .dear{font-size:25px;color:#ffb5cf;font-style:italic}.divider{text-align:center;color:#ff8fb8;letter-spacing:9px;margin:24px 0}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px}.promise{padding:20px 14px;border:1px solid #ffa0c333;border-radius:18px;background:#ffffff0a;text-align:center}.promise .emoji{font-size:28px}.promise h3{font-size:17px;font-weight:normal;color:#ffbad1;margin:12px 0 8px}.promise p{font:13px/1.65 Arial,sans-serif;color:#e6cad6;margin:0}
+.memory-list{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.memory{border-radius:16px;padding:19px;background:linear-gradient(135deg,#ff6da320,#ffffff09);border:1px solid #ffffff1a}.memory strong{display:block;color:#ffc0d7;font-size:18px;font-weight:normal;margin-bottom:8px}.memory span{font:13px/1.7 Arial,sans-serif;color:#e6ccd7}
+.quote{text-align:center;font-size:clamp(22px,4vw,31px);line-height:1.55;font-style:italic;color:#ffd1e1}.quote small{display:block;font:11px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:#ff9fbe;margin-top:18px}
+.proposal{text-align:center;padding:35px 18px}.proposal h2{font-size:clamp(30px,6vw,48px)}.proposal p{max-width:620px;margin:0 auto 24px}.buttons{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:25px}.btn{border:1px solid #ff9fc0;border-radius:999px;padding:14px 23px;cursor:pointer;transition:transform .2s,background .2s;color:#fff5f9;background:#ffffff0f;font:inherit}.btn:hover{transform:translateY(-3px);background:#ff82b02b}.btn.primary{background:linear-gradient(135deg,#ff689d,#b52d69);border-color:transparent;box-shadow:0 8px 25px #ff477e3b}#response{display:none;margin:26px auto 0;max-width:600px;border:1px solid #ffadcb59;border-radius:18px;padding:20px;background:#ff60991a;font-size:18px;line-height:1.8;color:#ffe0eb}
+footer{text-align:center;padding:34px 12px 10px;color:#c8a4b5;font:12px/1.8 Arial,sans-serif}footer strong{display:block;color:#ffb3cd;font:italic 23px Georgia,serif;margin:7px}.heart-line{font-size:20px;letter-spacing:8px;color:#ff75a7}
+@media(max-width:620px){.promise-grid,.memory-list{grid-template-columns:1fr}.card{border-radius:19px}.hero{padding-top:26px}.topline{font-size:9px;letter-spacing:2px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+
+#passwordGate{position:fixed;inset:0;z-index:10;display:flex;align-items:center;justify-content:center;padding:22px;background:linear-gradient(145deg,rgba(16,9,16,.97),rgba(54,13,39,.97));}
+.gate-card{width:min(460px,100%);text-align:center;padding:clamp(25px,7vw,42px);border:1px solid #ff9fc055;border-radius:26px;background:linear-gradient(145deg,#ffffff12,#ffffff06);box-shadow:0 20px 70px #0007;backdrop-filter:blur(14px)}
+.gate-rose{font-size:58px;filter:drop-shadow(0 0 18px #ff4d91);margin-bottom:12px}
+.gate-kicker{font:11px Arial,sans-serif;letter-spacing:3px;color:#ffacc8}
+.gate-card h1{font-size:clamp(34px,8vw,48px);margin:14px 0;color:#ffb2ce}
+.gate-card p{font:15px/1.8 Arial,sans-serif;color:#f0d4e0}
+#passwordForm{display:grid;gap:12px;margin-top:24px}
+#sitePassword{width:100%;padding:15px 17px;border-radius:13px;border:1px solid #ff9fc077;background:#180c17;color:#fff0f5;font:16px Arial,sans-serif;text-align:center;outline:none}
+#sitePassword:focus{border-color:#ff8fb8;box-shadow:0 0 0 3px #ff8fb822}
+.gate-button{border:0;border-radius:999px;padding:15px;background:linear-gradient(135deg,#ff689d,#b52d69);color:white;font: bold 15px Arial,sans-serif;cursor:pointer}
+#passwordError{min-height:20px;color:#ffc2d3;font:13px Arial,sans-serif}
+.gate-signature{margin-top:20px;color:#ffbad1;font:italic 16px Georgia,serif}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+body.locked main{display:none}
+
+</style></head>
+<body class="locked">
+<div id="passwordGate" role="dialog" aria-labelledby="gateTitle" aria-modal="true">
+  <div class="gate-card">
+    <div class="gate-rose">🌹</div>
+    <div class="gate-kicker">A LITTLE SECRET FOR YOU</div>
+    <h1 id="gateTitle">Hey, Rose 💗</h1>
+    <p>This little world was made just for you.<br>Enter the secret password to open your surprise.</p>
+    <form id="passwordForm">
+      <label class="sr-only" for="sitePassword">Secret password</label>
+      <input id="sitePassword" type="password" inputmode="numeric" placeholder="Enter password" autocomplete="off" required>
+      <button type="submit" class="gate-button">Unlock my surprise 💌</button>
+      <div id="passwordError" aria-live="polite"></div>
+    </form>
+    <div class="gate-signature">A surprise from Hussain Ali ❤️</div>
+  </div>
+</div>
+<div id="stars" aria-hidden="true"></div><div class="petals" id="petals" aria-hidden="true"></div><main>
+<div class="topline">A little corner of the universe, made just for you ✦</div>
+<header class="hero"><div class="eyebrow">For someone truly special</div><div class="rose-icon">🌹</div><h1>To My <span>Favourite Person</span></h1>
+<p class="subtitle">Some feelings deserve more than a simple message… so I made you a little world made of words, wishes, and a whole lot of heart.</p><div class="signature">With all my sincerity, from Hussain Ali ♡</div><div class="scroll-note">SCROLL SLOWLY · THIS IS FOR YOU ↓</div></header>
+<section class="card letter"><div class="section-label">A letter from my heart</div><h2>Dear Rose 🌹,</h2><p class="dear">My favourite person,</p>
+<p>I wanted to make something a little different for you—not just send another ordinary text, but create a small place where I could tell you what you mean to me.</p>
+<p>There is something lovely about the way one person can make an ordinary day feel a little brighter. Your name brings a smile to my face, and the thought of you can turn a simple moment into a memory I want to keep.</p>
+<p>I don't need perfect words to say this: <strong>you are special to me.</strong> I appreciate your presence, your little ways, and the happiness that comes with knowing you. If life were a book, I would be glad to see what the next pages have in store for us.</p>
+<p>I can't promise that every day will be perfect, but I can promise to try to be honest, kind, patient, and respectful. Your feelings matter to me, your comfort matters to me, and I want anything between us to feel safe and genuine—not rushed or forced.</p>
+<p>So this page is my little way of saying: I like you, Rose. More than a passing thought, more than a random smile. And I wanted you to know that in a way you could keep. 💗</p><div class="divider">♡ ✦ ♡</div><p style="text-align:center;color:#ffbad1;font-style:italic">Made especially for you, with care.</p></section>
+<section class="card"><div class="section-label">A few little promises</div><h2>If I get the chance…</h2><div class="promise-grid">
+<article class="promise"><div class="emoji">🤍</div><h3>I will listen</h3><p>Your thoughts deserve attention, even when you don't have the perfect words.</p></article>
+<article class="promise"><div class="emoji">🌷</div><h3>I will respect you</h3><p>Your boundaries, choices, dreams, and feelings will always matter.</p></article>
+<article class="promise"><div class="emoji">✨</div><h3>I will be genuine</h3><p>No pretending to be perfect—just honesty, effort, and kindness.</p></article></div></section>
+<section class="card"><div class="section-label">Little things I hope you remember</div><h2>For the days you need a smile</h2><div class="memory-list">
+<div class="memory"><strong>🌸 You are appreciated</strong><span>Not only for what you do, but for the person you are.</span></div>
+<div class="memory"><strong>🌙 Take your time</strong><span>You never have to rush your feelings or have every answer today.</span></div>
+<div class="memory"><strong>💌 Keep dreaming</strong><span>I hope life gives you reasons to be proud of yourself, again and again.</span></div>
+<div class="memory"><strong>🫶 Be yourself</strong><span>You don't have to be anyone else to deserve kindness and care.</span></div></div></section>
+<section class="card"><p class="quote">“If a little thought of you can brighten my day, imagine how beautiful it is to tell you that you matter to me.”<small>— A thought from Hussain Ali</small></p></section>
+<section class="card proposal" id="question"><div class="section-label">One honest question</div><h2>Rose, may I keep getting to know you? 🌹</h2>
+<p>I would love the chance to make more happy memories, share laughs, support your dreams, and see where this connection goes—one step at a time.</p><p><strong>There is no pressure to say yes.</strong> Whatever your answer is, I want you to feel comfortable being honest with me.</p>
+<div class="buttons"><button class="btn primary" id="yesBtn">Yes, let's see where it goes 💗</button><button class="btn" id="timeBtn">I'd like some time 🌷</button><button class="btn" id="friendBtn">I see you as a friend 🤍</button></div><div id="response" role="status" aria-live="polite"></div></section>
+<footer><div class="heart-line">♡ 🌹 ♡</div>Made with care, a little courage, and lots of heart.<strong>From Hussain Ali</strong><span>For Rose · A small page with a sincere message</span></footer></main>
+<script>
+(()=>{const stars=document.getElementById('stars'),petals=document.getElementById('petals');for(let i=0;i<65;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';s.style.animationDuration=2+Math.random()*4+'s';stars.appendChild(s)}
+function petal(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;let p=document.createElement('span');p.className='petal';p.textContent=['♡','✦','🌸'][Math.floor(Math.random()*3)];p.style.left=Math.random()*100+'%';p.style.fontSize=10+Math.random()*13+'px';let d=7+Math.random()*8;p.style.animationDuration=d+'s';petals.appendChild(p);setTimeout(()=>p.remove(),d*1000)}for(let i=0;i<12;i++)setTimeout(petal,i*350);setInterval(petal,900);
+const box=document.getElementById('response');function show(msg,celebrate){box.textContent=msg;box.style.display='block';box.scrollIntoView({behavior:'smooth',block:'nearest'});if(celebrate)for(let i=0;i<18;i++)setTimeout(()=>{let h=document.createElement('span');h.className='petal';h.textContent=['💗','💕','♡','🌸'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=15+Math.random()*15+'px';let d=3+Math.random()*3;h.style.animationDuration=d+'s';petals.appendChild(h);setTimeout(()=>h.remove(),d*1000)},i*90)}
+document.getElementById('yesBtn').onclick=()=>show('You just made this little corner of the internet feel extra special. 💗 Let’s take things gently, be honest with each other, and make the next chapter a good one. — Hussain Ali',true);
+document.getElementById('timeBtn').onclick=()=>show('Of course, Rose. Take all the time you need. There is no rush and no pressure—your comfort and honesty matter most. 🌷 — Hussain Ali',false);
+document.getElementById('friendBtn').onclick=()=>show('Thank you for being honest with me, Rose. I respect your feelings and appreciate you telling me. 🤍 — Hussain Ali',false);
+})();
+</script>
+<script>
+(function(){
+  const correctPassword = "2612";
+  const form = document.getElementById("passwordForm");
+  const input = document.getElementById("sitePassword");
+  const error = document.getElementById("passwordError");
+  form.addEventListener("submit", function(event){
+    event.preventDefault();
+    if (input.value === correctPassword) {
+      document.body.classList.remove("locked");
+      document.getElementById("passwordGate").style.display = "none";
+      input.value = "";
+    } else {
+      error.textContent = "That password doesn't match. Try again, Rose 💗";
+      input.value = "";
+      input.focus();
+    }
+  });
+})();
+</script>
+
+</body></html>
