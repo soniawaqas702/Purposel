@@ -35,6 +35,36 @@ footer{text-align:center;padding:34px 12px 10px;color:#c8a4b5;font:12px/1.8 Aria
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 body.locked main{display:none}
 
+
+html,body{height:100%;overflow:hidden}
+main{width:min(920px,94%);height:100vh;height:100svh;max-height:100svh;margin:auto;padding:10px 0 68px;overflow:hidden;display:flex;flex-direction:column}
+main>.topline{flex:0 0 auto;margin:5px 0;font-size:10px}
+.story-deck{position:relative;flex:1 1 auto;min-height:0;overflow:hidden}
+.story-slide{position:absolute;inset:0;overflow-y:auto;overflow-x:hidden;display:flex;flex-direction:column;justify-content:center;padding:6px 2px 12px;opacity:0;transform:translateX(34px) scale(.985);pointer-events:none;visibility:hidden;transition:opacity .4s ease,transform .4s ease,visibility .4s}
+.story-slide.active{opacity:1;transform:translateX(0) scale(1);pointer-events:auto;visibility:visible}
+.story-slide.exit-left{transform:translateX(-34px) scale(.985)}
+.story-slide>.card,.story-slide>header.hero{width:100%;margin:0}
+.story-slide>header.hero{padding:8px 12px 16px}
+.story-slide .card{padding:clamp(16px,3vh,28px)}
+.story-slide p{font-size:clamp(14px,1.8vh,17px);line-height:1.6}
+.story-slide h2{margin:8px 0 12px;font-size:clamp(24px,4vh,38px)}
+.story-slide .promise-grid,.story-slide .memory-list{margin-top:12px}
+.story-slide .promise{padding:12px 9px}
+.story-slide .memory{padding:13px}
+.story-slide .buttons{gap:8px;margin-top:13px}
+.story-slide .btn{padding:11px 15px;font-size:14px}
+.story-slide .proposal{padding:18px 12px}
+.story-slide .quote{font-size:clamp(21px,4vh,30px)}
+.deck-controls{position:absolute;z-index:5;left:0;right:0;bottom:5px;display:flex;align-items:center;justify-content:center;gap:14px;padding:7px}
+.deck-controls button{border:1px solid #ff9fc0aa;border-radius:999px;color:#fff5f9;background:#391329ef;padding:11px 18px;font:14px Arial,sans-serif;cursor:pointer;min-width:88px}
+.deck-controls button:disabled{opacity:.35;cursor:default}
+.deck-controls .next{background:linear-gradient(135deg,#ff689d,#b52d69);border-color:transparent}
+.deck-progress{color:#ffd0e0;font:12px Arial,sans-serif;min-width:48px;text-align:center;letter-spacing:1px}
+#passwordGate{overflow:auto}
+@media(max-width:620px){main{width:94%;padding-top:7px;padding-bottom:66px}.story-slide{padding:3px 0 8px}.story-slide .card{border-radius:18px}.story-slide .promise-grid,.story-slide .memory-list{grid-template-columns:1fr 1fr;gap:8px}.story-slide .promise p,.story-slide .memory span{font-size:11px;line-height:1.4}.story-slide .promise h3{font-size:14px;margin:6px 0}.story-slide .promise .emoji{font-size:22px}.story-slide .memory strong{font-size:14px}.story-slide .btn{padding:10px 11px;font-size:12px}}
+@media(max-height:700px){.story-slide .card{padding:14px}.story-slide p{line-height:1.45;margin-bottom:8px}.story-slide .promise-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){.story-slide{transition:none;transform:none}}
+
 </style></head>
 <body class="locked">
 <div id="passwordGate" role="dialog" aria-labelledby="gateTitle" aria-modal="true">
@@ -53,25 +83,19 @@ body.locked main{display:none}
   </div>
 </div>
 <div id="stars" aria-hidden="true"></div><div class="petals" id="petals" aria-hidden="true"></div><main>
-<div class="topline">A little corner of the universe, made just for you ✦</div>
-<header class="hero"><div class="eyebrow">For someone truly special</div><div class="rose-icon">🌹</div><h1>To My <span>Favourite Person</span></h1>
-<p class="subtitle">Some feelings deserve more than a simple message… so I made you a little world made of words, wishes, and a whole lot of heart.</p><div class="signature">With all my sincerity, from Hussain Ali ♡</div><div class="scroll-note">SCROLL SLOWLY · THIS IS FOR YOU ↓</div></header>
-<section class="card letter"><div class="section-label">A letter from my heart</div><h2>Dear Rose 🌹,</h2><p class="dear">My favourite person,</p>
+<div class="topline">A little corner of the universe, made just for you ✦</div><div class="story-deck" id="storyDeck"><div class="story-slide active" data-slide="0"><header class="hero"><div class="eyebrow">For someone truly special</div><div class="rose-icon">🌹</div><h1>To My <span>Favourite Person</span></h1>
+<p class="subtitle">Some feelings deserve more than a simple message… so I made you a little world made of words, wishes, and a whole lot of heart.</p><div class="signature">With all my sincerity, from Hussain Ali ♡</div><div class="scroll-note">SCROLL SLOWLY · THIS IS FOR YOU ↓</div></header></div><div class="story-slide" data-slide="1"><section class="card letter"><div class="section-label">A letter from my heart</div><h2>Dear Rose 🌹,</h2><p class="dear">My favourite person,</p>
 <p>Rose, I could write a thousand words, but the truth is simple: <strong>you make my ordinary moments feel a little more beautiful.</strong> 💗</p>
 <p>Your name brings a smile to my face, and even a small conversation with you can become the sweetest part of my day.</p>
 <p>I’m not promising a perfect fairytale. I’m hoping for something real: honest talks, silly laughs, little surprises, and two hearts choosing to understand each other. If you let me, I’d love to make more beautiful memories with you—one sweet moment at a time. 🌙</p>
-<p><strong>Rose, you’re not just someone I like; you’re someone I’d love to know more deeply.</strong> So here’s my little question, written with a whole lot of courage and affection… 💌</p><div class="divider">♡ ✦ ♡</div><p style="text-align:center;color:#ffbad1;font-style:italic">Made especially for you, with care.</p></section>
-<section class="card"><div class="section-label">A few little promises</div><h2>If I get the chance…</h2><div class="promise-grid">
+<p><strong>Rose, you’re not just someone I like; you’re someone I’d love to know more deeply.</strong> So here’s my little question, written with a whole lot of courage and affection… 💌</p><div class="divider">♡ ✦ ♡</div><p style="text-align:center;color:#ffbad1;font-style:italic">Made especially for you, with care.</p></section></div><div class="story-slide" data-slide="2"><section class="card"><div class="section-label">A few little promises</div><h2>If I get the chance…</h2><div class="promise-grid">
 <article class="promise"><div class="emoji">🤍</div><h3>I will listen</h3><p>Your thoughts deserve attention, even when you don't have the perfect words.</p></article>
 <article class="promise"><div class="emoji">🌷</div><h3>I will respect you</h3><p>Your boundaries, choices, dreams, and feelings will always matter.</p></article>
-<article class="promise"><div class="emoji">✨</div><h3>I will be genuine</h3><p>No pretending to be perfect—just honesty, effort, and kindness.</p></article></div></section>
-<section class="card"><div class="section-label">Little things I hope you remember</div><h2>For the days you need a smile</h2><div class="memory-list">
+<article class="promise"><div class="emoji">✨</div><h3>I will be genuine</h3><p>No pretending to be perfect—just honesty, effort, and kindness.</p></article></div></section></div><div class="story-slide" data-slide="3"><section class="card"><div class="section-label">Little things I hope you remember</div><h2>For the days you need a smile</h2><div class="memory-list">
 <div class="memory"><strong>🌸 You are appreciated</strong><span>Not only for what you do, but for the person you are.</span></div>
 <div class="memory"><strong>🌙 Take your time</strong><span>You never have to rush your feelings or have every answer today.</span></div>
 <div class="memory"><strong>💌 Keep dreaming</strong><span>I hope life gives you reasons to be proud of yourself, again and again.</span></div>
-<div class="memory"><strong>🫶 Be yourself</strong><span>You don't have to be anyone else to deserve kindness and care.</span></div></div></section>
-<section class="card"><p class="quote">“If a little thought of you can brighten my day, imagine how beautiful it is to tell you that you matter to me.”<small>— A thought from Hussain Ali</small></p></section>
-<section class="card proposal" id="littleQuestions">
+<div class="memory"><strong>🫶 Be yourself</strong><span>You don't have to be anyone else to deserve kindness and care.</span></div></div></section></div><div class="story-slide" data-slide="4"><section class="card"><p class="quote">“If a little thought of you can brighten my day, imagine how beautiful it is to tell you that you matter to me.”<small>— A thought from Hussain Ali</small></p></section></div><div class="story-slide" data-slide="5"><section class="card proposal" id="littleQuestions">
   <div class="section-label">A tiny heart-to-heart 💌</div>
   <h2>Can I ask you a few cute questions, Rose? 🌹</h2>
   <p>Choose whatever feels right—there are no wrong answers. Tap an option and see my reply. 💗</p>
@@ -95,14 +119,39 @@ body.locked main{display:none}
     <button class="btn choice" data-msg="Best friends who can talk about anything and laugh at everything? That’s a beautiful place to start. 🫶">🫶 Best-friend energy</button>
     <button class="btn choice" data-msg="Then let’s keep it natural, honest, and comfortable—no pressure, just getting to know each other. ✨">✨ Let’s see naturally</button>
   </div>
-</section>
-<section class="card proposal" id="question"><div class="section-label">One honest question</div><h2>Rose, will you give this little love story a chance? 🌹💗</h2>
+</section></div><div class="story-slide" data-slide="6"><section class="card proposal" id="question"><div class="section-label">One honest question</div><h2>Rose, will you give this little love story a chance? 🌹💗</h2>
 <p>I’d love to share more smiles, cute conversations, little surprises, and memories with you. No perfect fairytale needed—just honesty, care, and two people seeing where things go.</p><p><strong>Choose what your heart feels.</strong> No pressure at all; your honest answer will always be respected. 💌</p>
-<div class="buttons"><button class="btn primary" id="yesBtn">Yes, Hussain 💗</button><button class="btn" id="dateBtn">Let’s go on a cute date ☕</button><button class="btn" id="maybeBtn">Maybe… tell me more 🌷</button><button class="btn" id="timeBtn">I need a little time 🫶</button><button class="btn" id="friendBtn">Friends for now 🤍</button><button class="btn" id="noBtn">Not that way 💐</button></div><div id="response" role="status" aria-live="polite"></div></section>
-<footer><div class="heart-line">♡ 🌹 ♡</div>Made with care, a little courage, and lots of heart.<strong>From Hussain Ali</strong><span>For Rose · A small page with a sincere message</span></footer></main>
+<div class="buttons"><button class="btn primary" id="yesBtn">Yes, Hussain 💗</button><button class="btn" id="dateBtn">Let’s go on a cute date ☕</button><button class="btn" id="maybeBtn">Maybe… tell me more 🌷</button><button class="btn" id="timeBtn">I need a little time 🫶</button><button class="btn" id="friendBtn">Friends for now 🤍</button><button class="btn" id="noBtn">Not that way 💐</button></div><div id="response" role="status" aria-live="polite"></div></section></div><div class="story-slide" data-slide="7"><footer><div class="heart-line">♡ 🌹 ♡</div>Made with care, a little courage, and lots of heart.<strong>From Hussain Ali</strong><span>For Rose · A small page with a sincere message</span></div></div><div class="deck-controls" aria-label="Story navigation"><button type="button" id="prevSlide" disabled>← Back</button><span class="deck-progress" id="deckProgress" aria-live="polite">1 / 8</span><button type="button" class="next" id="nextSlide">Next ✨</button></div></main>
 <script>
 (()=>{const stars=document.getElementById('stars'),petals=document.getElementById('petals');for(let i=0;i<65;i++){let s=document.createElement('i');s.className='star';s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';s.style.animationDelay=Math.random()*4+'s';s.style.animationDuration=2+Math.random()*4+'s';stars.appendChild(s)}
 function petal(){if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;let p=document.createElement('span');p.className='petal';p.textContent=['♡','✦','🌸'][Math.floor(Math.random()*3)];p.style.left=Math.random()*100+'%';p.style.fontSize=10+Math.random()*13+'px';let d=7+Math.random()*8;p.style.animationDuration=d+'s';petals.appendChild(p);setTimeout(()=>p.remove(),d*1000)}for(let i=0;i<12;i++)setTimeout(petal,i*350);setInterval(petal,900);
+
+const slides=[...document.querySelectorAll('.story-slide')];
+let currentSlide=0;
+const prevSlide=document.getElementById('prevSlide');
+const nextSlide=document.getElementById('nextSlide');
+const deckProgress=document.getElementById('deckProgress');
+function goToSlide(index){
+  if(index<0||index>=slides.length||index===currentSlide)return;
+  const old=currentSlide;
+  slides[old].classList.remove('active');
+  slides[old].classList.toggle('exit-left',index>old);
+  currentSlide=index;
+  slides[currentSlide].classList.remove('exit-left');
+  slides[currentSlide].classList.add('active');
+  prevSlide.disabled=currentSlide===0;
+  nextSlide.textContent=currentSlide===slides.length-1?'Start again ↺':'Next ✨';
+  deckProgress.textContent=(currentSlide+1)+' / '+slides.length;
+  slides[currentSlide].scrollTop=0;
+}
+prevSlide.addEventListener('click',()=>goToSlide(currentSlide-1));
+nextSlide.addEventListener('click',()=>goToSlide(currentSlide===slides.length-1?0:currentSlide+1));
+document.addEventListener('keydown',event=>{
+  if(document.body.classList.contains('locked'))return;
+  if(event.key==='ArrowRight')goToSlide(Math.min(currentSlide+1,slides.length-1));
+  if(event.key==='ArrowLeft')goToSlide(Math.max(currentSlide-1,0));
+});
+
 const box=document.getElementById('response');function show(msg,celebrate){box.textContent=msg;box.style.display='block';box.scrollIntoView({behavior:'smooth',block:'nearest'});if(celebrate)for(let i=0;i<18;i++)setTimeout(()=>{let h=document.createElement('span');h.className='petal';h.textContent=['💗','💕','♡','🌸'][Math.floor(Math.random()*4)];h.style.left=Math.random()*100+'%';h.style.fontSize=15+Math.random()*15+'px';let d=3+Math.random()*3;h.style.animationDuration=d+'s';petals.appendChild(h);setTimeout(()=>h.remove(),d*1000)},i*90)}
 document.getElementById('yesBtn').onclick=()=>show('Rose, you just made my heart smile. 💗 Let’s make this something sweet, honest, and beautiful—one moment at a time. — Hussain Ali',true);
 document.getElementById('dateBtn').onclick=()=>show('A cute date it is—good conversation, a few laughs, and hopefully that lovely smile of yours. ☕🌹 We’ll choose something you’re comfortable with. — Hussain Ali',true);
